@@ -6,16 +6,16 @@
 			<div ng-repeat="x in apps" class="col s12 m6 l4 ">	
 				<div ng-click="gotoLink(x.Link)" class="catalog desktop border">
 			    <div class="catalog-icon">
-			        <i class="medium-large material-icons  light-blue-text accent-3">{{x.Icon}}</i>
+			        <i class="medium-large material-icons indigo-text lighten-2">{{x.Icon}}</i>
 			    </div>
 			    <div class="item">
 			    	<h2>
-			        <a class=" light-blue-text accent-3">{{x.Title}}</a>
+			        <a class="indigo-text lighten-2">{{x.Title}}</a>
 				    </h2>
 				    <p>{{x.SubTitle}}</p>
 				    <p class="links-bar">
-			        <a class="link-item">
-			            Hover to read more
+			        <a class="link-item indigo-text lighten-4">
+			            More...
 			        </a>
 				    </p>
 				    <div class="item-overlay bottom">
@@ -25,7 +25,7 @@
 			    </div>
 			    
 			    <div class="button-container">
-		        <a class="button catalog-btn white blue-text darken-3" target="_blank" href="{{x.Link}}">
+		        <a class="button catalog-btn white indigo-text lighten-2" target="_blank" href="{{x.Link}}">
 		            Go to App
 		        </a>
 				  </div>
