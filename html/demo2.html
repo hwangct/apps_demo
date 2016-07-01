@@ -1,209 +1,35 @@
 <div class="container">
-<h2>Web Inspired</h2>
-<p>{{ message }}<p>
+<h2>Web Inspired + Jquery</h2>
+<p>{{ message }}</p>
 <!--  Apps go here -->
 		<div class="row">
-			<div class="col s12 m6 l4 ">	
-				<div class="catalog desktop border">
+			<div ng-repeat="x in apps" class="col s12 m6 l4 ">	
+				<div ng-click="gotoLink(x.Link)" class="catalog desktop border">
 			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
+			        <i class="medium-large material-icons  light-blue-text accent-3">{{x.Icon}}</i>
+			    </div>
+			    <div class="item">
+			    	<h2>
+			        <a class=" light-blue-text accent-3">{{x.Title}}</a>
+				    </h2>
+				    <p>{{x.SubTitle}}</p>
+				    <p class="links-bar">
+			        <a class="link-item">
+			            Hover to read more
+			        </a>
+				    </p>
+				    <div class="item-overlay bottom">
+				    	<h2>{{x.Title}}</h2>
+				    	<p class="desc">{{x.Desc}}</p>
+				    </div>
 			    </div>
 			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-btn" target="_self" title="App1" href="#">
-			            Go to App
-			        </a>
-			    </p>
-				</div>	
-			</div>
-			<div class="col s12 m6 l4 ">	
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-btn" target="_self" title="App1" href="#">
-			            Go to App
-			        </a>
-			    </p>
-				</div>	
-			</div>
-			<div class="col s12 m6 l4 ">	
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-btn" target="_self" title="App1" href="#">
-			            Go to App
-			        </a>
-			    </p>
-				</div>	
-			</div>
-
-			<div class="col s12 m6 l4 ">
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-download" target="_self" title="Download trial" href="#">
-			            Go to App!
-			        </a>
-			    </p>
+			    <div class="button-container">
+		        <a class="button catalog-btn white blue-text darken-3" target="_blank" href="{{x.Link}}">
+		            Go to App
+		        </a>
+				  </div>
 				</div>
-			</div>
-			
-			<div class="col s12 m6 l4 ">
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-download" target="_self" title="Download trial" href="#">
-			            Go to App!
-			        </a>
-			    </p>
-				</div>
-			</div>
-			
-			<div class="col s12 m6 l4">
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-download" target="_self" title="Download trial" href="#">
-			            Go to App!
-			        </a>
-			    </p>
-				</div>
-			</div>
-
-			<div class="col s12 m6 l4 ">	
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-btn" target="_self" title="App1" href="#">
-			            Go to App
-			        </a>
-			    </p>
-				</div>	
-			</div>
-			<div class="col s12 m6 l4 ">	
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-btn" target="_self" title="App1" href="#">
-			            Go to App
-			        </a>
-			    </p>
-				</div>	
-			</div>
-			<div class="col s12 m6 l4 ">	
-				<div class="catalog desktop border">
-			    <div class="catalog-icon">
-			        <a href="#"><i class="adobe-icon-ps"></i></a>
-			    </div>
-			    
-			    <h2>
-			        <a href="#">App Title</a>
-			    </h2>
-			    <p>Here is a short description of the app.  It does blah blah blah and more stuff.</p>
-			    <p class="links-bar">
-			        <a href="#" class="link-item">
-			            Read More
-			        </a>
-			    </p>
-			    <p class="button-container">
-			        <a class="button catalog-btn" target="_self" title="App1" href="#">
-			            Go to App
-			        </a>
-			    </p>
-				</div>	
-			</div>
+			</div>			
 		</div>
 </div>

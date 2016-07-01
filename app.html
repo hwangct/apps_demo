@@ -9,16 +9,22 @@
   	<link rel="stylesheet" href="css/custom.css">
 	</head>
 	<body ng-app="sampleApp">
-	  <nav class="deep-purple lighten-1">
-	    <div class="nav-wrapper">
-	      <a href="#!" class="brand-logo">Apps Demo</a>
-	      <ul class="right hide-on-med-and-down">
-	        <li><a href="#demo1"><i class="material-icons">high_quality</i></a></li>
-	        <li><a href="#demo2"><i class="material-icons">assessment</i></a></li>
-	        <li><a href="#demo3"><i class="material-icons">system_update_alt</i></a></li>
-	      </ul>
-	    </div>
-	  </nav>
+	  <nav>
+    <div class="nav-wrapper white">
+      <a href="#!" class="brand-logo cyan-text accent-3">Apps Demo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons cyan-text accent-3">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#demo1"><i class="material-icons cyan-text accent-3">high_quality</i></a></li>
+        <li><a href="#demo2"><i class="material-icons cyan-text accent-3">assessment</i></a></li>
+	      <li><a href="#demo3"><i class="material-icons cyan-text accent-3">system_update_alt</i></a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#demo1"><i class="material-icons large cyan-text accent-3">high_quality</i></a></li>
+        <li><a href="#demo2"><i class="material-icons large cyan-text accent-3">assessment</i></a></li>
+	      <li><a href="#demo3"><i class="material-icons large cyan-text accent-3">system_update_alt</i></a></li>
+      </ul>
+    </div>
+  </nav>
 	  <div ng-view>Apps go here</div>
 	  
 	  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
@@ -26,5 +32,11 @@
 	  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 		<script src="js/apps_demo.js"></script>
+		<script>
+			$(function() {
+				$(".button-collapse").sideNav();
+			});
+		</script>
+		
 	</body>
 </html>
