@@ -3,10 +3,12 @@
 	<head>
 		<title>App Demo in Angular</title>
 		<!-- Compiled and minified CSS -->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     <!--Import materialize.css-->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  	<link rel="stylesheet" href="css/custom.css">
+    <link href="assets/font/" rel="stylesheet">
+  	<link rel="stylesheet" href="assets/css/materialize.css">
+  	<link rel="stylesheet" href="assets/css/material-icons.css">
+  	<link rel="stylesheet" href="assets/css/custom.css">
 	</head>
 	<body ng-app="sampleApp">
 	  <nav>
@@ -24,19 +26,20 @@
 	      <li><a href="#demo3"><i class="material-icons large cyan-text accent-3">system_update_alt</i></a></li>
       </ul>
     </div>
-  </nav>
+  	</nav>
 	  <div ng-view>Apps go here</div>
-	  
-	  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	  <script src="assets/libs/angular.min.js"></script>
+	  <script src="assets/libs/angular-route.min.js"></script>
 	  <!-- Compiled and minified JavaScript -->
-	  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-		<script src="js/apps_demo.js"></script>
+	  <script type="text/javascript" src="assets/libs/jquery.min.js"></script>
+  	<script src="assets/libs/materialize.min.js"></script>
+		<script src="app/app.routes.js"></script>
 		<script>
 			$(function() {
 				$(".button-collapse").sideNav();
 			});
 		</script>
+		
 		
 	</body>
 </html>

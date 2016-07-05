@@ -1,28 +1,27 @@
-var sampleApp = angular.module('sampleApp', []);
+var sampleApp = angular.module('sampleApp', ['ngRoute']);
 
-sampleApp.config(['$routeProvider',
-  function($routeProvider) {
+sampleApp.config(function($routeProvider) {
 	$routeProvider.
 	  when('/demo1', {
-		  templateUrl: 'html/demo1.html',
+		  templateUrl: 'app/components/app1/app1View.html',
 		  controller: 'DemoController',
 		  msg: 'This demo is based off of material design, and utilizes the materialize platform. A higher level of effort is required for integration, but provides a lot of UX+UI out of the box.'
 			  
 	  }).
 	  when('/demo2', {
-		  templateUrl: 'html/demo2.html',
+		  templateUrl: 'app/components/app2/app2View.html',
 		  controller: 'DemoController',
 		  msg: "This demo uses custom code, but is inspired from other designs. There aren't any dependencies, but everything must be written, including the responsiveness of the layout."
 	  }).
 	  when('/demo3', {
-		  templateUrl: 'html/demo3.html',
+		  templateUrl: 'app/components/app3/app3View.html',
 		  controller: 'DemoController',
 		  msg: "This demo is based off the original design. There aren't any dependencies, but everything must be written, including the responsiveness of the layout. "
 	  }).
 	  otherwise({
 		  redirectTo: '/demo1'
 	  });
-}]);
+});
 
 sampleApp.controller('DemoController', function($scope, $routeParams) {
 	// Business Logic
